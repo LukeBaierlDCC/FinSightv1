@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - FinSight</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">FinSight</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">Finances</a></li> <!--Dropdown menu for Expense, Income, Transaction History-->
+                    <li><a href="{{ url_for('about') }}">Analytics</a></li> <!--Dropdown menu for spending patterns, budget vs actual, custom reports-->
+                    <li><a href="{{ url_for('about') }}">Budget</a></li> <!--Dropdown menu set monthly budget, adjust budget, budget goals-->
+                    <li><a href="{{ url_for('about') }}">Account</a></li> <!--Dropdown menu profile settings, notifications, logout-->
+                    <li><a href="{{ url_for('about') }}">About</a></li> <!--Maybe include careers in About-->
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('about') }}">Alerts</a></li> <!--dropdown for reminders and overspending alerts-->
+                    <li><a href="{{ url_for('about') }}">Import/Export</a></li> <!--import transactions and export data-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        {% block content %}{% endblock %}
+        <hr />
+        <footer>
+            <p>&copy; {{ year }} - FinSight</p>
+        </footer>
+    </div>
+
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>
