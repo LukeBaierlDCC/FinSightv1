@@ -22,13 +22,14 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('about') }}">Finances</a></li> <!--Dropdown menu for Expense, Income, Transaction History-->
                     <li><a href="{{ url_for('about') }}">Analytics</a></li> <!--Dropdown menu for spending patterns, budget vs actual, custom reports-->
                     <li><a href="{{ url_for('about') }}">Budget</a></li> <!--Dropdown menu set monthly budget, adjust budget, budget goals-->
                     <li><a href="{{ url_for('about') }}">Account</a></li> <!--Dropdown menu profile settings, notifications, logout-->
-                    <li><a href="{{ url_for('about') }}">About</a></li> <!--Maybe include careers in About-->
-                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li id="alerts-dropdown"></li>
+                    <li id="import-dropdown"></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>.
                     <li><a href="{{ url_for('about') }}">Alerts</a></li> <!--dropdown for reminders and overspending alerts-->
                     <li><a href="{{ url_for('about') }}">Import/Export</a></li> <!--import transactions and export data-->
                 </ul>
@@ -47,6 +48,9 @@
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="{{ url_for('static', filename='js/dist/assets/index-[hash].js') }}"></script>
     {% block scripts %}{% endblock %}
 
 </body>

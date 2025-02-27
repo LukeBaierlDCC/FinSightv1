@@ -39,8 +39,17 @@
     <Folder Include="FinSight\static\fonts\" />
     <Folder Include="FinSight\static\scripts\" />
     <Folder Include="FinSight\templates\" />
+    <Folder Include="react_app\" />
+    <Folder Include="react_app\src\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="react_app\src\AccountDropdown.jsx" />
+    <Content Include="react_app\src\AnalyticsDropdown.jsx" />
+    <Content Include="react_app\src\BudgetDropdown.jsx" />
+    <Content Include="react_app\src\FinancesDropdown.jsx" />
+    <Content Include="react_app\src\main.jsx" />
+    <Content Include="react_app\src\Navbar.jsx" />
+    <Content Include="react_app\vite.config.js" />
     <Content Include="requirements.txt" />
     <Content Include="FinSight\static\content\bootstrap.css" />
     <Content Include="FinSight\static\content\bootstrap.min.css" />
