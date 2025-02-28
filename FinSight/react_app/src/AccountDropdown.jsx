@@ -46,7 +46,7 @@ export default function Navbar() {
 
                     <li className="relative" onMouseEnter={() => toggleDropdown('analytics')} onMouseLeave={() => toggleDropdown(null)}>
                         <button className="px-4 py-2">Budget ▼</button>
-                        {dropdown === 'analytics' && (
+                        {dropdown === 'budget' && (
                             <ul className="absolute bg-white text-black shadow-lg rounded mt-1">
                                 <li><Link to="/monthly-budget" className="block px-4 py-2">Set Monthly Budget</Link></li>
                                 <li><Link to="/adjust-budget" className="block px-4 py-2">Adjust Budget</Link></li>

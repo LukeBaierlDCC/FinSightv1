@@ -1,6 +1,16 @@
-﻿import { useState } from "react";
+﻿import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./Navbar";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+    <BrowserRouter>
+        <Navbar />
+    </BrowserRouter>
+);
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);

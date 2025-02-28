@@ -43,6 +43,7 @@
     <Folder Include="react_app\src\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="react_app\index.html" />
     <Content Include="react_app\src\AccountDropdown.jsx" />
     <Content Include="react_app\src\AnalyticsDropdown.jsx" />
     <Content Include="react_app\src\BudgetDropdown.jsx" />
